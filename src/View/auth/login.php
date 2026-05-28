@@ -3,7 +3,7 @@
     <div class="col-md-6 col-lg-4">
 
       <div class="text-center mb-4">
-        <a href="index.php">
+        <a href="/">
           <img src="/public/ceritawa-logo.png" alt="Logo Ceritawa" height="42" class="mb-2">
         </a>
         <p class="text-secondary font-monospace small">Siap belajar teks anekdot sambil tertawa?</p>
