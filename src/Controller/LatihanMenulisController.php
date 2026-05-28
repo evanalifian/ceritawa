@@ -10,7 +10,6 @@ class LatihanMenulisController
   {
     View::render("latihan-menulis/index", [
       "title" => "Latihan Menulis Teks Anekdot — Ceritawa",
-      "scripts" => ["latihan-menulis.js"],
       "styles" => ["latihan-menulis.css"]
     ]);
   }

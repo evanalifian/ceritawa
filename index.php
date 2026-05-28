@@ -1,6 +1,7 @@
 <?php
 
 use App\Ceritawa\Config\Router;
+use App\Ceritawa\Controller\AnekdotController;
 use App\Ceritawa\Controller\AuthController;
 use App\Ceritawa\Controller\GaleriController;
 use App\Ceritawa\Controller\HomeController;
@@ -24,6 +25,7 @@ $materi = new MateriController();
 $quiz = new QuizController();
 $latihanMenulis = new LatihanMenulisController();
 $galeri = new GaleriController();
+$anekdot = new AnekdotController();
 
 Router::add("/", "GET", fn() => $home->index());
 Router::add("/account", "GET", fn() => $account->page(), fn() => AuthMiddleware::isNotAuth());
@@ -43,6 +45,7 @@ Router::add("/materi", "GET", fn() => $materi->index());
 Router::add("/quiz", "GET", fn() => $quiz->index());
 
 Router::add("/latihan-menulis", "GET", fn() => $latihanMenulis->index());
+Router::add("/save-anekdot", "POST", fn() => $anekdot->save(), fn() => AuthMiddleware::isNotAuth());
 
 Router::add("/galeri", "GET", fn() => $galeri->index());
 
