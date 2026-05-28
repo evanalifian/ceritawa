@@ -99,8 +99,7 @@
               <textarea
                 class="form-control custom-textarea p-4 text-dark font-monospace border border-2 border-dark rounded-3 shadow-sm"
                 name="konten_anekdot" id="konten_anekdot" rows="12"
-                placeholder="Tuliskan cerita anekdot utuhmu di sini secara mengalir...&#10;&#10;Contoh alur cerita sekolah:&#10;- Guru memberikan tugas mendadak saat jam terakhir.&#10;- Murid mulai mengeluh karena lelah namun tidak didengar.&#10;- Guru berkata, 'Tugas ini melatih masa depan kalian!'&#10;- Salah satu murid menyahut, 'Masa depan kami jadi kuli kertas ya, Pak?'&#10;- Seisi kelas tertawa kecut, dan suasana pun hening."
-                required></textarea>
+                placeholder="Tuliskan cerita anekdot utuhmu di sini secara mengalir...&#10;&#10;Contoh alur cerita sekolah:&#10;- Guru memberikan tugas mendadak saat jam terakhir.&#10;- Murid mulai mengeluh karena lelah namun tidak didengar.&#10;- Guru berkata, 'Tugas ini melatih masa depan kalian!'&#10;- Salah satu murid menyahut, 'Masa depan kami jadi kuli kertas ya, Pak?'&#10;- Seisi kelas tertawa kecut, dan suasana pun hening."></textarea>
             </div>
           </div>
 

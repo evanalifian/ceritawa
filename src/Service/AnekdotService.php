@@ -23,12 +23,7 @@ class AnekdotService
 
   private function saveValidate(AnekdotModel $model): void
   {
-    if (
-      empty($model->penulis_anekdot) ||
-      empty($model->email_penulis_anekdot) ||
-      empty($model->judul_anekdot) ||
-      empty($model->konten_anekdot)
-    ) {
+    if (empty($model->konten_anekdot)) {
       throw new ValidationException("Form tidak boleh kosong");
     }
   }
