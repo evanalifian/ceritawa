@@ -37,7 +37,7 @@ class AuthController
       self::$authModel->password = $_POST["password"];
 
       self::$authService->auth(self::$authModel);
-      View::redirect("/account");
+      View::redirect("/");
     } catch (ValidationException $e) {
       View::render("auth/login", [
         "title" => "Masuk — Ceritawa",

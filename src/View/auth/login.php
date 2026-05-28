@@ -13,15 +13,25 @@
         <div class="card-body">
           <h3 class="card-title fw-bolder text-dark mb-4">Selamat Datang!</h3>
 
-          <form action="" method="POST">
+          <?php if (isset($data["error_message"])): ?>
+            <div
+              class="alert bg-danger-subtle text-dark border border-dark border-2 rounded-3 d-flex align-items-center gap-2 mb-4 shadow-sm"
+              role="alert">
+              <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+              <div class="small fw-bold font-monospace text-uppercase tracking-wide">
+                <?= $data["error_message"] ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
+          <form action="/login" method="POST">
             <div class="mb-3">
-              <label for="username" class="form-label fw-bold font-monospace small text-uppercase">NISN /
-                Username</label>
+              <label for="username" class="form-label fw-bold font-monospace small text-uppercase">Username</label>
               <div class="input-group">
                 <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
                     class="bi bi-person-fill"></i></span>
                 <input type="text" class="form-control border-dark border-2 rounded-end-3" id="username" name="username"
-                  placeholder="Masukkan NISN atau username" required>
+                  placeholder="Masukkan NISN atau username">
               </div>
             </div>
 
@@ -31,7 +41,7 @@
                 <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
                     class="bi bi-lock-fill"></i></span>
                 <input type="password" class="form-control border-dark border-2 rounded-end-3" id="password"
-                  name="password" placeholder="••••••••" required>
+                  name="password" placeholder="••••••••">
               </div>
             </div>
 
