@@ -33,9 +33,9 @@ class SignupController
   public function save(): void
   {
     try {
-      self::$signupModel->name = $_POST["name"];
       self::$signupModel->username = $_POST["username"];
       self::$signupModel->password = $_POST["password"];
+      self::$signupModel->nama_lengkap = $_POST["nama_lengkap"];
 
       self::$signupService->save(self::$signupModel);
       View::redirect("/login");

@@ -13,26 +13,36 @@
                 <div class="card-body">
                     <h3 class="card-title fw-bolder text-dark mb-4">Daftar Akun Baru</h3>
 
-                    <form action="" method="POST">
+                    <?php if (isset($data["error_message"])): ?>
+                        <div class="alert bg-danger-subtle text-dark border border-dark border-2 rounded-3 d-flex align-items-center gap-2 mb-4 shadow-sm"
+                            role="alert">
+                            <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+                            <div class="small fw-bold font-monospace text-uppercase tracking-wide">
+                                <?= $data["error_message"] ?>
+                            </div>
+                        </div>
+                    <?php endif ?>
+
+                    <form action="/signup" method="POST">
                         <div class="mb-3">
-                            <label for="fullname" class="form-label fw-bold font-monospace small text-uppercase">Nama
-                                Lengkap</label>
+                            <label for="username"
+                                class="form-label fw-bold font-monospace small text-uppercase">Username</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
-                                        class="bi bi-type me-1"></i></span>
-                                <input type="text" class="form-control border-dark border-2 rounded-end-3" id="fullname"
-                                    name="fullname" placeholder="Nama lengkap sesuai absensi" required>
+                                        class="bi bi-person-fill"></i></span>
+                                <input type="text" class="form-control border-dark border-2 rounded-end-3" id="username"
+                                    name="username" placeholder="Masukkan username unik kamu">
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="nisn"
-                                class="form-label fw-bold font-monospace small text-uppercase">NISN</label>
+                            <label for="nama_lengkap"
+                                class="form-label fw-bold font-monospace small text-uppercase">Nama Lengkap</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
-                                        class="bi bi-card-text"></i></span>
-                                <input type="text" class="form-control border-dark border-2 rounded-end-3" id="nisn"
-                                    name="nisn" placeholder="10 digit nomor induk siswa" maxlength="10" required>
+                                        class="bi bi-type me-1"></i></span>
+                                <input type="text" class="form-control border-dark border-2 rounded-end-3"
+                                    id="nama_lengkap" name="nama_lengkap" placeholder="Nama lengkap sesuai absensi">
                             </div>
                         </div>
 
@@ -43,19 +53,7 @@
                                 <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
                                         class="bi bi-lock-fill"></i></span>
                                 <input type="password" class="form-control border-dark border-2 rounded-end-3"
-                                    id="password" name="password" placeholder="Minimal 6 karakter" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="confirm_password"
-                                class="form-label fw-bold font-monospace small text-uppercase">Ulangi Kata Sandi</label>
-                            <div class="input-group">
-                                <span class="input-group-text bg-light border-dark border-2 rounded-start-3"><i
-                                        class="bi bi-shield-lock-fill"></i></span>
-                                <input type="password" class="form-control border-dark border-2 rounded-end-3"
-                                    id="confirm_password" name="confirm_password"
-                                    placeholder="Ulangi kata sandi di atas" required>
+                                    id="password" name="password" placeholder="Minimal 6 karakter">
                             </div>
                         </div>
 

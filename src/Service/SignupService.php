@@ -24,7 +24,7 @@ class SignupService
     $result = self::$userRepository->findByUsername($model->username)->fetch();
 
     if ($result) {
-      throw new ValidationException("User already exist");
+      throw new ValidationException("Username sudah tersedia");
     }
 
     $model->password = password_hash($model->password, PASSWORD_BCRYPT);
@@ -33,8 +33,8 @@ class SignupService
 
   private static function signupValidation(SignupModel $signupModel): void
   {
-    if (strlen($signupModel->name) === 0 || strlen($signupModel->username) === 0 || strlen($signupModel->password) === 0) {
-      throw new ValidationException("Name, Username, and Password can noT be empty");
+    if (empty($signupModel->nama_lengkap) || empty($signupModel->username) || empty($signupModel->password)) {
+      throw new ValidationException("Username, password, dan nama lengkap tidak boleh kosong");
     }
   }
 }
