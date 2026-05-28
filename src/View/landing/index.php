@@ -19,7 +19,7 @@
         <a href="/materi" class="btn btn-dark btn-lg px-4 py-3 fw-bold rounded-4 shadow border border-2 border-dark">
           Buka Lembar Materi <i class="bi bi-journal-bookmark-fill ms-2 text-warning"></i>
         </a>
-        <?php if (isset($_SERVER["auth"])): ?>
+        <?php if (isset($_SESSION["auth"])): ?>
           <a href="/latihan-menulis" class="btn btn-light text-dark btn-lg px-4 py-3 fw-bold rounded-4 shadow-sm border border-2 border-dark">
             Mulai Corat-Coret <i class="bi bi-pencil-square ms-1 text-primary"></i>
           </a>
