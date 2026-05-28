@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PHPBoilerplate\Exception;
+namespace App\Ceritawa\Exception;
 
 class ValidationException extends \Exception
 {

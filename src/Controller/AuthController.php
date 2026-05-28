@@ -1,13 +1,13 @@
 <?php
 
-namespace App\PHPBoilerplate\Controller;
+namespace App\Ceritawa\Controller;
 
-use App\PHPBoilerplate\Config\View;
-use App\PHPBoilerplate\Config\Database;
-use App\PHPBoilerplate\Model\AuthModel;
-use App\PHPBoilerplate\Repository\UserRepository;
-use App\PHPBoilerplate\Service\AuthService;
-use App\PHPBoilerplate\Exception\ValidationException;
+use App\Ceritawa\Config\View;
+use App\Ceritawa\Config\Database;
+use App\Ceritawa\Model\AuthModel;
+use App\Ceritawa\Repository\UserRepository;
+use App\Ceritawa\Service\AuthService;
+use App\Ceritawa\Exception\ValidationException;
 
 class AuthController
 {
@@ -25,7 +25,9 @@ class AuthController
 
   public function page(): void
   {
-    View::render("auth/login");
+    View::render("auth/login", [
+      "title" => "Masuk — Ceritawa"
+    ]);
   }
 
   public function auth(): void
@@ -38,6 +40,7 @@ class AuthController
       View::redirect("/account");
     } catch (ValidationException $e) {
       View::render("auth/login", [
+        "title" => "Masuk — Ceritawa",
         "error_message" => $e->getMessage()
       ]);
     }

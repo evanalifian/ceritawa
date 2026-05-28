@@ -1,0 +1,26 @@
+.transition-all {
+  transition: all 0.2s ease;
+}
+.option-btn:hover {
+  transform: translateY(-2px);
+  background-color: #f8f9fa !important;
+  border-color: #000 !important;
+  color: #000 !important;
+}
+.progress-bar-animated {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+/* Animasi Bounce Halus */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-bounce {
+  animation: bounce 2s infinite ease-in-out;
+}

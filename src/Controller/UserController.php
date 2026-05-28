@@ -1,13 +1,13 @@
 <?php
 
-namespace App\PHPBoilerplate\Controller;
+namespace App\Ceritawa\Controller;
 
-use App\PHPBoilerplate\Config\Database;
-use App\PHPBoilerplate\Config\View;
-use App\PHPBoilerplate\Exception\ValidationException;
-use App\PHPBoilerplate\Model\UserModel;
-use App\PHPBoilerplate\Repository\UserRepository;
-use App\PHPBoilerplate\Service\UserService;
+use App\Ceritawa\Config\Database;
+use App\Ceritawa\Config\View;
+use App\Ceritawa\Exception\ValidationException;
+use App\Ceritawa\Model\UserModel;
+use App\Ceritawa\Repository\UserRepository;
+use App\Ceritawa\Service\UserService;
 
 class UserController
 {

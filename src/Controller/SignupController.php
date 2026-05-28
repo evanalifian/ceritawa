@@ -1,13 +1,13 @@
 <?php
 
-namespace App\PHPBoilerplate\Controller;
+namespace App\Ceritawa\Controller;
 
-use App\PHPBoilerplate\Config\View;
-use App\PHPBoilerplate\Config\Database;
-use App\PHPBoilerplate\Model\SignupModel;
-use App\PHPBoilerplate\Repository\UserRepository;
-use App\PHPBoilerplate\Service\SignupService;
-use App\PHPBoilerplate\Exception\ValidationException;
+use App\Ceritawa\Config\View;
+use App\Ceritawa\Config\Database;
+use App\Ceritawa\Model\SignupModel;
+use App\Ceritawa\Repository\UserRepository;
+use App\Ceritawa\Service\SignupService;
+use App\Ceritawa\Exception\ValidationException;
 
 class SignupController
 {
@@ -25,7 +25,9 @@ class SignupController
 
   public function page(): void
   {
-    View::render("auth/signup");
+    View::render("auth/signup", [
+      "title" => "Daftar Akun Baru — Ceritawa"
+    ]);
   }
 
   public function save(): void
@@ -39,6 +41,7 @@ class SignupController
       View::redirect("/login");
     } catch (ValidationException $e) {
       View::render("auth/signup", [
+        "title" => "Daftar Akun Baru — Ceritawa",
         "error_message" => $e->getMessage()
       ]);
     }

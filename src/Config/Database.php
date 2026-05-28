@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PHPBoilerplate\Config;
+namespace App\Ceritawa\Config;
 
 class Database
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\PHPBoilerplate\Middleware;
+namespace App\Ceritawa\Middleware;
 
-use App\PHPBoilerplate\Config\View;
+use App\Ceritawa\Config\View;
 
 class AuthMiddleware
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PHPBoilerplate\Config;
+namespace App\Ceritawa\Config;
 
 class Router
 {
@@ -32,6 +32,8 @@ class Router
     }
 
     http_response_code(404);
-    View::notFound();
+    View::notFound([
+      "title" => "Halaman Tidak Ditemukan — Ceritawa"
+    ]);
   }
 }

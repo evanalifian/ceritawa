@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PHPBoilerplate\Model;
+namespace App\Ceritawa\Model;
 
 class SignupModel extends UserModel
 {

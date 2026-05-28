@@ -1,0 +1,68 @@
+.fw-black {
+  font-weight: 900 !important;
+}
+.shadow-comic {
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+.shadow-comic-sm {
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+
+.custom-input,
+.custom-textarea {
+  border: 2px solid #000000 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  transition: all 0.25s ease;
+}
+.custom-input:focus,
+.custom-textarea:focus {
+  background-color: #ffffff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  transform: translateY(-2px);
+}
+
+.note-box {
+  background-color: #ffffff;
+  border-left: 5px solid #6c757d !important;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.transition-all {
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn-submit:hover {
+  background-color: #1e2125 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.animate-bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}

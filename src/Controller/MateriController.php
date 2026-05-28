@@ -4,12 +4,12 @@ namespace App\Ceritawa\Controller;
 
 use App\Ceritawa\Config\View;
 
-class HomeController
+class MateriController
 {
   public function index(): void
   {
-    View::render("landing/index", [
-      "title" => "Ceritawa — Mading Digital Teks Anekdot"
+    View::render("materi/index", [
+      "title" => "Materi Teks Anekdot — Ceritawa"
     ]);
   }
 }

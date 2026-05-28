@@ -1,10 +1,10 @@
 <?php
 
-namespace App\PHPBoilerplate\Service;
+namespace App\Ceritawa\Service;
 
-use App\PHPBoilerplate\Model\SignupModel;
-use App\PHPBoilerplate\Repository\UserRepository;
-use App\PHPBoilerplate\Exception\ValidationException;
+use App\Ceritawa\Model\SignupModel;
+use App\Ceritawa\Repository\UserRepository;
+use App\Ceritawa\Exception\ValidationException;
 
 class SignupService
 {

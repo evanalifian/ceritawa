@@ -1,9 +1,9 @@
 <?php
 
-namespace App\PHPBoilerplate\Repository;
+namespace App\Ceritawa\Repository;
 
-use App\PHPBoilerplate\Model\UserModel;
-use App\PHPBoilerplate\Model\SignupModel;
+use App\Ceritawa\Model\UserModel;
+use App\Ceritawa\Model\SignupModel;
 
 class UserRepository
 {
