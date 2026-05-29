@@ -29,11 +29,11 @@
             <?php endforeach ?>
             <?php if (isset($_SESSION['auth'])): ?>
               <div class="nav-item dropdown ms-lg-2 mt-2 mt-lg-0">
-                <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 border border-dark border-2 rounded-pill px-3 py-1 bg-light text-dark shadow-sm"
+                <button class="nav-link dropdown-toggle d-flex align-items-center gap-2 border border-dark border-2 rounded-pill px-3 py-1 bg-light text-dark shadow-sm"
                   href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="transition: none;">
                   <i class="bi bi-person-circle fs-5 text-primary"></i>
                   <span class="small text-lowercase fw-bolder">Siswa Ceritawa</span>
-                </a>
+                </button>
 
                 <ul class="dropdown-menu dropdown-menu-end border border-dark border-2 rounded-3 p-2 shadow mt-2">
                   <li>

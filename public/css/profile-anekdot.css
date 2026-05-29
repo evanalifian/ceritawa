@@ -1,0 +1,40 @@
+/* Gaya Khas Mading / Neo-Brutalism Komik */
+.shadow-comic {
+  box-shadow: 6px 6px 0px 0px #000000 !important;
+}
+.shadow-comic-sm {
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+}
+
+/* CSS UNTUK BENTO FLEX GRID */
+.bento-flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Mencegah kartu memanjang mengikuti tetangganya */
+  margin: -12px;
+}
+
+.bento-flex-grid .karya-item {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .bento-flex-grid .karya-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bento-flex-grid .karya-item {
+    width: 33.333%;
+  }
+}
+
+/* Animasi Efek Hover Tombol */
+.btn-outline-primary:hover,
+.btn-outline-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0px 0px #000 !important;
+}

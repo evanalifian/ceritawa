@@ -7,6 +7,7 @@ use App\Ceritawa\Controller\GaleriController;
 use App\Ceritawa\Controller\HomeController;
 use App\Ceritawa\Controller\LatihanMenulisController;
 use App\Ceritawa\Controller\MateriController;
+use App\Ceritawa\Controller\ProfileController;
 use App\Ceritawa\Controller\QuizController;
 use App\Ceritawa\Controller\SignupController;
 use App\Ceritawa\Controller\UserController;
@@ -26,12 +27,14 @@ $quiz = new QuizController();
 $latihanMenulis = new LatihanMenulisController();
 $galeri = new GaleriController();
 $anekdot = new AnekdotController();
+$profile = new ProfileController();
 
 Router::add("/", "GET", fn() => $home->index());
 
-Router::add("/profile", "GET", fn() => $account->page(), [fn() => AuthMiddleware::isNotAuth()]);
+Router::add("/profile", "GET", fn() => $profile->index(), [fn() => AuthMiddleware::isNotAuth()]);
 Router::add("/account/update", "POST", fn() => $account->update(), [fn() => AuthMiddleware::isNotAuth()]);
 Router::add("/account/delete", "GET", fn() => $account->delete(), [fn() => AuthMiddleware::isNotAuth()]);
+Router::add("/profile/teks-anekdot", "GET", fn() => $profile->anekdot(), [fn() => AuthMiddleware::isNotAuth()]);
 
 Router::add("/login", "GET", fn() => $auth->page(), [fn() => AuthMiddleware::isAuth()]);
 Router::add("/login", "POST", fn() => $auth->auth(), [fn() => AuthMiddleware::isAuth()]);

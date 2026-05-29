@@ -32,4 +32,9 @@ class KaryaService
   {
     return self::$karyaRepository->getAllKarya();
   }
+
+  public function getAnekdotByUser(int $idUser): array
+  {
+    return self::$karyaRepository->getKaryaByUser($idUser);
+  }
 }

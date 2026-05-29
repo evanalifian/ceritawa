@@ -25,4 +25,11 @@ class KaryaRepository
     $statement->execute();
     return $statement->fetchAll();
   }
+
+  public function getKaryaByUser(int $idUser): array
+  {
+    $statement = self::$connDB->prepare("SELECT * FROM karya WHERE id_user = ?");
+    $statement->execute([$idUser]);
+    return $statement->fetchAll();
+  }
 }

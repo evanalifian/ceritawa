@@ -23,15 +23,6 @@ class UserController
     self::$userService = new UserService($userRepository);
   }
 
-  public function page(): void
-  {
-    View::render("profile/index", [
-      "title" => "Profil Kreator — Ceritawa",
-      "user" => self::$userService->findByID($_SESSION["auth"]["id_user"]),
-      "styles" => ["profile.css"]
-    ]);
-  }
-
   public function update(): void
   {
     try {
