@@ -55,9 +55,9 @@
                     <hr class="dropdown-divider border-dark border-1 my-1">
                   </li>
                   <li>
-                    <a class="dropdown-item rounded-2 fw-bold py-2 text-danger" href="/logout">
+                    <button type="button" id="logout-button" class="dropdown-item rounded-2 fw-bold py-2 text-danger">
                       <i class="bi bi-box-arrow-right me-2"></i>Logout
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>

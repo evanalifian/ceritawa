@@ -41,6 +41,7 @@
 <?php endif ?>
 
 <script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/app.js"></script>
 <?php if (isset($data["scripts"])): ?>
   <?php foreach ($data["scripts"] as $script): ?>
     <script src="/public/js/<?= $script ?>"></script>
