@@ -50,6 +50,7 @@ Router::add("/quiz", "GET", fn() => $quiz->index());
 
 Router::add("/latihan-menulis", "GET", fn() => $latihanMenulis->index());
 Router::add("/save-anekdot", "POST", fn() => $anekdot->save(), [fn() => AuthMiddleware::isNotAuth()]);
+Router::add("/anekdot/(.*)", "GET", fn($judulKarya) => $anekdot->readAnekdot($judulKarya), [fn() => AuthMiddleware::isNotAuth()]);
 
 Router::add("/galeri", "GET", fn() => $galeri->index());
 

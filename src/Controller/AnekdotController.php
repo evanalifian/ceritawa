@@ -50,4 +50,14 @@ class AnekdotController
       ]);
     }
   }
+
+  public function readAnekdot(string $judulKarya): void
+  {
+    $res = self::$anekdotService->getAnekdotByJudul(str_replace('%20', ' ', $judulKarya));
+    View::render("read-anekdot/index", [
+      "title" => $res["judul_karya"],
+      "styles" => ['read-anekdot.css'],
+      "anekdot" => $res
+    ]);
+  }
 }

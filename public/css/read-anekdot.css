@@ -1,0 +1,25 @@
+/* Gaya Khas Mading / Neo-Brutalism Komik */
+.shadow-comic {
+  box-shadow: 8px 8px 0px 0px #000000 !important;
+}
+.shadow-comic-sm {
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+}
+.border-dark-3 {
+  border: 3px solid #000000 !important;
+}
+
+/* Efek Kertas Mading Agak Miring */
+.mading-paper {
+  background-image: radial-gradient(#e1e1e1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Bubble Chat / Komik Bubble Style */
+.comic-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 0px 0px #000000;
+}

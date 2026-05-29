@@ -49,7 +49,7 @@
               </div>
 
               <div class="d-flex flex-column gap-2 mt-auto">
-                <a href="/detail-anekdot/"
+                <a href="/anekdot/<?= htmlspecialchars($a["judul_karya"]) ?>"
                   class="btn btn-dark border border-dark border-2 rounded-3 fw-bold py-2 shadow-none">
                   Baca Detail <i class="bi bi-eye ms-1"></i>
                 </a>

@@ -27,4 +27,9 @@ class AnekdotService
       throw new ValidationException("Form tidak boleh kosong");
     }
   }
+
+  public function getAnekdotByJudul(string $judulKarya): array
+  {
+    return self::$anekdotRepository->getAnekdotByJudul($judulKarya);
+  }
 }

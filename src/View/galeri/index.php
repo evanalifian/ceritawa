@@ -53,11 +53,9 @@
               <span><i class="bi bi-calendar3 me-1"></i><?= date("d M Y", strtotime($k["created_at"])) ?></span>
             </h6>
 
-            <button type="button"
-              class="btn btn-dark border border-dark border-2 rounded-3 fw-bold w-100 mt-4 py-2.5 shadow-none"
-              onclick="openDetail('<?= $k['tipe_karya'] ?>-<?= $k['id_karya'] ?>')">
+            <a href="/anekdot/<?= $k["judul_karya"] ?>" class="btn btn-dark border border-dark border-2 rounded-3 fw-bold w-100 mt-4 py-2.5 shadow-none">
               <?= $k["tipe_karya"] === "anekdot" ? 'Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>' : 'Lihat Komik Digital <i class="bi bi-eye ms-1"></i>' ?>
-            </button>
+            </a>
 
           </div>
         </div>
