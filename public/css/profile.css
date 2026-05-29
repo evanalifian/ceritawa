@@ -1,0 +1,13 @@
+/* Tambahan style custom untuk konsistensi efek Neo-Brutalism */
+.shadow-comic {
+  box-shadow: 6px 6px 0px 0px #000000 !important;
+}
+.shadow-comic-sm {
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+}
+.custom-input:focus {
+  background-color: #fff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+  outline: none;
+}

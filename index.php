@@ -28,7 +28,8 @@ $galeri = new GaleriController();
 $anekdot = new AnekdotController();
 
 Router::add("/", "GET", fn() => $home->index());
-Router::add("/account", "GET", fn() => $account->page(), fn() => AuthMiddleware::isNotAuth());
+
+Router::add("/profile", "GET", fn() => $account->page(), fn() => AuthMiddleware::isNotAuth());
 Router::add("/account/update", "POST", fn() => $account->update(), fn() => AuthMiddleware::isNotAuth());
 Router::add("/account/delete", "GET", fn() => $account->delete(), fn() => AuthMiddleware::isNotAuth());
 

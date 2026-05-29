@@ -25,19 +25,26 @@ class UserController
 
   public function page(): void
   {
-    View::render("account");
+    View::render("profile/index", [
+      "title" => "Profil Kreator — Ceritawa",
+      "user" => self::$userService->findByID($_SESSION["auth"]["id_user"]),
+      "styles" => ["profile.css"]
+    ]);
   }
 
   public function update(): void
   {
     try {
-      self::$userModel->name = $_POST["name"];
-      self::$userModel->username = $_POST["username"];
+      self::$userModel->nama_lengkap = $_POST["nama_lengkap"];
+      self::$userModel->email = $_POST["email"];
 
-      self::$userService->update(self::$userModel, $_SESSION['auth']["id"]);
-      View::redirect("/account");
+      self::$userService->update(self::$userModel, $_SESSION['auth']["id_user"]);
+      View::redirect("/profile");
     } catch (ValidationException $e) {
-      View::render("account", [
+      View::render("profile/index", [
+        "title" => "Profil Kreator — Ceritawa",
+        "user" => self::$userService->findByID($_SESSION["auth"]["id_user"]),
+        "styles" => ["profile.css"],
         "error_message" => $e->getMessage()
       ]);
     }
@@ -49,7 +56,10 @@ class UserController
       self::$userService->delete($_SESSION['auth']["id"]);
       View::redirect("/");
     } catch (ValidationException $e) {
-      View::render("account", [
+      View::render("profile/index", [
+        "title" => "Profil Kreator — Ceritawa",
+        "user" => self::$userService->findByID($_SESSION["auth"]["id_user"]),
+        "styles" => ["profile.css"],
         "error_message" => $e->getMessage()
       ]);
     }

@@ -15,28 +15,35 @@ class UserService
     self::$userRepository = $userRepository;
   }
 
+  public function findByID(int $id_user): array
+  {
+    return self::$userRepository->findByID($id_user);
+  }
+
   public function update(UserModel $userModel, int $userID): void
   {
     $model = $userModel;
 
     self::updateValidation($model);
 
-    $result = self::$userRepository->findByID($userID)->fetch();
+    $result = self::$userRepository->findByID($userID);
 
     if (!$result) {
-      throw new ValidationException("User does not match");
+      throw new ValidationException("User tidak cocok");
     }
 
     self::$userRepository->update($model, $userID);
 
-    $_SESSION["auth"]["name"] = $model->name;
-    $_SESSION["auth"]["username"] = $model->username;
+    $_SESSION["auth"] = [
+      "id_user" => $result["id_user"],
+      "username" => $result["username"],
+    ];
   }
 
   private static function updateValidation(UserModel $userModel): void
   {
-    if (strlen($userModel->name) === 0 || strlen($userModel->username) === 0) {
-      throw new ValidationException("Name and Username can noT be empty");
+    if (empty($userModel->nama_lengkap)) {
+      throw new ValidationException("Nama tidak boleh kosong");
     }
   }
 

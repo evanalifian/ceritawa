@@ -14,11 +14,11 @@ class UserRepository
     self::$connDB = $connDB;
   }
 
-  public function findByID(int $userID): \PDOStatement
+  public function findByID(int $userID): array
   {
-    $statement = self::$connDB->prepare("SELECT * FROM users WHERE id = ?");
+    $statement = self::$connDB->prepare("SELECT * FROM users WHERE id_user = ?");
     $statement->execute([$userID]);
-    return $statement;
+    return $statement->fetch();
   }
 
   public function findByUsername(string $username): \PDOStatement
@@ -37,8 +37,8 @@ class UserRepository
 
   public function update(UserModel $userModel, int $userID): \PDOStatement
   {
-    $statement = self::$connDB->prepare("UPDATE users SET name = ?, username = ? WHERE id = ?");
-    $statement->execute([$userModel->name, $userModel->username, $userID]);
+    $statement = self::$connDB->prepare("UPDATE users SET nama_lengkap = ?, email = ? WHERE id_user = ?");
+    $statement->execute([$userModel->nama_lengkap, $userModel->email, $userID]);
     return $statement;
   }
 
