@@ -8,8 +8,6 @@ class AuthMiddleware
 {
   public static function isAuth(): void
   {
-    session_start();
-
     if (isset($_SESSION["auth"])) {
       View::redirect("/");
     }
@@ -17,8 +15,6 @@ class AuthMiddleware
 
   public static function isNotAuth(): void
   {
-    session_start();
-
     if (!isset($_SESSION["auth"])) {
       View::redirect("/login");
     }
