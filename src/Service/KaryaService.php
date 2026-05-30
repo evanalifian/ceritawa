@@ -15,10 +15,10 @@ class KaryaService
     self::$karyaRepository = $karyaRepository;
   }
 
-  public function save(KaryaModel $model): void
+  public function save(KaryaModel $model, string $tipe): void
   {
     self::saveValidate($model);
-    self::$karyaRepository->save($model, "anekdot");
+    self::$karyaRepository->save($model, $tipe);
   }
 
   private function saveValidate(KaryaModel $model): void

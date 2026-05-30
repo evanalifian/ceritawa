@@ -39,7 +39,7 @@ class AnekdotController
       self::$karyaModel->judul_karya = $_POST["judul_anekdot"];
       self::$anekdotModel->konten_anekdot = $_POST["konten_anekdot"];
 
-      self::$karyaService->save(self::$karyaModel);
+      self::$karyaService->save(self::$karyaModel, "anekdot");
       self::$anekdotService->save(self::$anekdotModel);
       View::redirect("/galeri");
     } catch (ValidationException $e) {

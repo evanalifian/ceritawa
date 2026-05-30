@@ -47,7 +47,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item rounded-2 fw-bold mb-2 py-2 text-dark" href="/profile/komik-diunggah">
+                    <a class="dropdown-item rounded-2 fw-bold mb-2 py-2 text-dark" href="/profile/komik">
                       <i class="bi bi-image-fill me-2 text-warning"></i>Komik Saya
                     </a>
                   </li>

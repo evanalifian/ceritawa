@@ -54,7 +54,7 @@
                   Baca Detail <i class="bi bi-eye ms-1"></i>
                 </a>
 
-                <div class="d-flex gap-2">
+                <!-- <div class="d-flex gap-2">
                   <a href="/edit-anekdot/"
                     class="btn btn-outline-primary border-2 rounded-3 fw-bold flex-grow-1 py-2">
                     Edit <i class="bi bi-pencil-square ms-1"></i>
@@ -63,7 +63,7 @@
                     onclick="confirmDelete('')">
                     Hapus <i class="bi bi-trash3-fill ms-1"></i>
                   </button>
-                </div>
+                </div> -->
               </div>
 
             </div>
