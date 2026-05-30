@@ -21,15 +21,27 @@ class KaryaRepository
 
   public function getAllKarya(): array
   {
-    $statement = self::$connDB->prepare("SELECT * FROM karya");
+    $statement = self::$connDB->prepare("
+      SELECT 
+          k.judul_karya,
+          k.penulis_karya,
+          k.email_penulis_karya,
+          k.tipe_karya,
+          k.created_at,
+          km.file_name_komik,
+          km.deskripsi_komik
+      FROM karya AS k
+      LEFT JOIN komik AS km ON km.id_karya = k.id_karya
+      LEFT JOIN anekdot AS a ON a.id_karya = k.id_karya
+    ");
     $statement->execute();
     return $statement->fetchAll();
   }
 
-  public function getKaryaByUser(int $idUser): array
+  public function getKaryaByUserAndType(int $idUser, string $tipe_karya): array
   {
-    $statement = self::$connDB->prepare("SELECT * FROM karya WHERE id_user = ?");
-    $statement->execute([$idUser]);
+    $statement = self::$connDB->prepare("SELECT * FROM karya WHERE id_user = ? AND tipe_karya = ?");
+    $statement->execute([$idUser, $tipe_karya]);
     return $statement->fetchAll();
   }
 }

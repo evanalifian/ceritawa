@@ -35,7 +35,8 @@ class KomikController
   {
     View::render("komik/index", [
       "title" => "Komik Saya — Ceritawa",
-      "styles" => ["komik.css"]
+      "styles" => ["komik.css"],
+      "komik" => self::$komikService->getAllKomik()
     ]);
   }
 

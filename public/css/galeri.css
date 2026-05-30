@@ -1,0 +1,24 @@
+.masonry-gallery-row {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start; /* Kunci utama: elemen tidak akan dipaksa sama tinggi ke bawah */
+}
+
+/* RESPONSIVE BREAKPOINTS: Memaksa isi ke samping */
+@media (min-width: 768px) {
+  .masonry-gallery-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry-gallery-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.masonry-gallery-item {
+  width: 100%;
+  /* Menghapus inline-block karena CSS Grid menangani pembungkusan secara native */
+}

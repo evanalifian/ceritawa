@@ -46,23 +46,22 @@
                 <span class="badge bg-danger-subtle text-danger border border-danger px-2.5 py-1.5 rounded-3 fw-bold small">
                   <i class="bi bi-file-earmark-pdf-fill me-1"></i> PDF DOCUMENT
                 </span>
-                <span class="text-muted font-monospace small">#<?= htmlspecialchars($k["id_komik"]) ?></span>
               </div>
 
-              <h4 class="fw-bold text-dark mb-2 text-truncate"><?= htmlspecialchars($k["judul_komik"]) ?></h4>
+              <h4 class="fw-bold text-dark mb-2 text-truncate"><?= htmlspecialchars($k["judul_karya"]) ?></h4>
               <p class="text-secondary small mb-4 flex-grow-1">
                 <?= htmlspecialchars($k["deskripsi_komik"]) ?>
               </p>
 
               <div class="bg-light p-3 border border-dark rounded-3 mb-4 font-monospace small">
-                <div class="text-truncate"><strong>Kreator:</strong> <?= htmlspecialchars($k["penulis_komik"]) ?></div>
+                <div class="text-truncate"><strong>Kreator:</strong> <?= htmlspecialchars($k["penulis_karya"]) ?></div>
                 <div class="text-truncate text-muted mt-1" style="font-size: 0.8rem;">
-                  <i class="bi bi-envelope me-1"></i><?= htmlspecialchars($k["email_komik"]) ?>
+                  <i class="bi bi-envelope me-1"></i><?= htmlspecialchars($k["email_penulis_karya"]) ?>
                 </div>
               </div>
 
               <div class="d-grid gap-2">
-                <a href="/uploads/komik/<?= htmlspecialchars($k['file_komik']) ?>" target="_blank" class="btn btn-dark border border-dark-2 rounded-3 fw-bold py-2">
+                <a href="/public/uploads/komik/<?= htmlspecialchars($k['file_name_komik']) ?>" target="_blank" class="btn btn-dark border border-dark-2 rounded-3 fw-bold py-2">
                   Buka Dokumen <i class="bi bi-box-arrow-up-right ms-1"></i>
                 </a>
                 <button type="button" class="btn btn-outline-danger border-2 rounded-3 fw-bold py-2"

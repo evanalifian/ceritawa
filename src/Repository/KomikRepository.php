@@ -19,4 +19,23 @@ class KomikRepository
     $statement->execute([$model->deskripsi_komik, $model->file_name_komik]);
     return $statement;
   }
+
+  public function getAllKomik(): array {
+    $statement = self::$connDB->prepare("
+      SELECT
+          k.id_karya,
+          k.judul_karya,
+          k.penulis_karya,
+          k.email_penulis_karya,
+          k.tipe_karya,
+          k.created_at,
+          km.id_komik,
+          km.deskripsi_komik,
+          km.file_name_komik
+      FROM karya AS k
+      JOIN komik AS km ON km.id_karya = k.id_karya
+    ");
+    $statement->execute();
+    return $statement->fetchAll();
+  }
 }
