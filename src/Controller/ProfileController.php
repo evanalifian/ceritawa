@@ -43,7 +43,7 @@ class ProfileController
   {
     View::render("profile-anekdot/index", [
       "title" => "Anekdot Saya — Ceritawa",
-      "anekdot" => self::$karyaService->getKaryaByUserAndType($_SESSION["auth"]["id_user"], "anekdot"),
+      "anekdot" => self::$karyaService->getAllAnekdot($_SESSION["auth"]["id_user"]),
       "styles" => ["profile-anekdot.css"],
       "scripts" => ["profile-anekdot.js"]
     ]);

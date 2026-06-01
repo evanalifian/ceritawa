@@ -44,4 +44,24 @@ class KaryaRepository
     $statement->execute([$idUser, $tipe_karya]);
     return $statement->fetchAll();
   }
+
+  public function getAllAnekdot(int $id_user): array
+  {
+    $statement = self::$connDB->prepare("
+      SELECT
+          k.id_karya,
+          k.id_user,
+          k.judul_karya,
+          k.penulis_karya,
+          k.email_penulis_karya,
+          k.tipe_karya,
+          k.created_at,
+          a.konten_anekdot
+      FROM karya AS k
+      JOIN anekdot AS a ON a.id_karya = k.id_karya
+      WHERE k.id_user = ?
+    ");
+    $statement->execute([$id_user]);
+    return $statement->fetchAll();
+  }
 }

@@ -23,7 +23,6 @@
   <?php else: ?>
 
     <div id="my-gallery-grid" class="bento-flex-grid">
-
       <?php foreach ($data["anekdot"] as $a): ?>
         <div class="karya-item">
           <div

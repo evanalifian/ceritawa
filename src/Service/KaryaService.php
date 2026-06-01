@@ -37,4 +37,9 @@ class KaryaService
   {
     return self::$karyaRepository->getKaryaByUserAndType($idUser, $tipe_karya);
   }
+
+  public function getAllAnekdot(int $id_user): array
+  {
+    return self::$karyaRepository->getAllAnekdot($id_user);
+  }
 }
