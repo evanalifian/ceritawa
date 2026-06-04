@@ -27,12 +27,14 @@
               <a class="nav-link text-<?= $menu["path"] === $_SERVER['REQUEST_URI'] ? "primary" : "muted" ?>"
                 href="<?= $menu["path"] ?>"><?= $menu["name"] ?></a>
             <?php endforeach ?>
+
             <?php if (isset($_SESSION['auth'])): ?>
               <div class="nav-item dropdown ms-lg-2 mt-2 mt-lg-0">
-                <button class="nav-link dropdown-toggle d-flex align-items-center gap-2 border border-dark border-2 rounded-pill px-3 py-1 bg-light text-dark shadow-sm"
+                <button
+                  class="nav-link dropdown-toggle d-flex align-items-center gap-2 border border-dark border-2 rounded-pill px-3 py-1 bg-light text-dark shadow-sm"
                   href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="transition: none;">
                   <i class="bi bi-person-circle fs-5 text-primary"></i>
-                  <span class="small text-lowercase fw-bolder">Siswa Ceritawa</span>
+                  <span class="small text-lowercase fw-bolder">Akun saya</span>
                 </button>
 
                 <ul class="dropdown-menu dropdown-menu-end border border-dark border-2 rounded-3 p-2 shadow mt-2">
@@ -60,6 +62,14 @@
                     </button>
                   </li>
                 </ul>
+              </div>
+            <?php else: ?>
+              <div class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a href="/login"
+                  class="btn btn-warning border border-dark border-2 rounded-pill px-4 fw-bolder small text-uppercase tracking-wide d-inline-flex align-items-center shadow-sm w-100 justify-content-center"
+                  style="transition: none;">
+                  <i class="bi bi-box-arrow-in-right fs-5 me-2"></i>Log in
+                </a>
               </div>
             <?php endif ?>
           </div>
