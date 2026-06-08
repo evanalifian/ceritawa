@@ -20,7 +20,8 @@
           Buka Lembar Materi <i class="bi bi-journal-bookmark-fill ms-2 text-warning"></i>
         </a>
         <?php if (isset($_SESSION["auth"])): ?>
-          <a href="/latihan-menulis" class="btn btn-light text-dark btn-lg px-4 py-3 fw-bold rounded-4 shadow-sm border border-2 border-dark">
+          <a href="/latihan-menulis"
+            class="btn btn-light text-dark btn-lg px-4 py-3 fw-bold rounded-4 shadow-sm border border-2 border-dark">
             Mulai Corat-Coret <i class="bi bi-pencil-square ms-1 text-primary"></i>
           </a>
         <?php else: ?>
@@ -141,11 +142,14 @@
         <div class="row align-items-center g-4">
           <div class="col-sm-3 text-center">
             <div
-              class="d-inline-flex align-items-center justify-content-center bg-info border border-2 border-dark rounded-4 fw-bold text-dark shadow-sm position-relative"
+              class="d-inline-flex align-items-center justify-content-center bg-info border border-2 border-dark rounded-4 fw-bold text-dark shadow-sm position-relative overflow-hidden"
               style="width: 95px; height: 95px; transform: rotate(-2deg);">
-              <i class="bi bi-person-badge text-dark display-5"></i>
+
+              <!-- PENGGANTIAN IKON MENJADI TAG IMG -->
+              <img src="/public/profil.jpg" alt="Foto Hani Dwi Yulinda Putri" class="w-100 h-100 object-fit-cover">
+
               <div class="position-absolute top-0 start-0 translate-middle bg-danger rounded-circle"
-                style="width: 12px; height: 12px;"></div>
+                style="width: 12px; height: 12px; z-index: 2;"></div>
             </div>
           </div>
           <div class="col-sm-9 text-center text-sm-start border-start-sm border-light-subtle">
@@ -154,7 +158,7 @@
               MEDIA</span>
             <h5 class="fw-bold text-dark mb-1 fs-4">Hani Dwi Yulinda Putri</h5>
             <p class="text-secondary small fw-medium mb-3">
-              Mahasiswa Pendidikan Bahasa dan Sastra Indonesia · Universitas Trunojoyo Madura
+              Mahasiswa Pendidikan Bahasa dan Sastra Indonesia · Universitas Trunodjoyo Madura
             </p>
             <div class="bg-light p-3 rounded-3 border-start border-4 border-warning">
               <span class="d-block small text-muted fw-bold text-uppercase tracking-wider mb-1"
