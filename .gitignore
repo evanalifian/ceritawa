@@ -1,4 +1,5 @@
 vendor
 .env
 design
-public/uploads/komik
+public/uploads/komik/*
+!public/uploads/komik/.gitkeep
