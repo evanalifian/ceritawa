@@ -36,6 +36,7 @@ class KomikController
     View::render("komik/index", [
       "title" => "Komik Saya — Ceritawa",
       "styles" => ["komik.css"],
+      "scripts" => ["komik.js"],
       "komik" => self::$komikService->getAllKomik()
     ]);
   }
@@ -48,7 +49,7 @@ class KomikController
       self::$karyaModel->email_penulis_karya = $_POST["email_penulis_karya"];
       self::$komikModel->deskripsi_komik = $_POST["deskripsi_komik"];
       self::$komikModel->file_name_komik = $_FILES["file_komik"]["name"];
-      
+
       self::$karyaService->save(self::$karyaModel, "komik");
       self::$komikService->save(self::$komikModel);
       View::redirect("/profile/komik");
@@ -60,6 +61,21 @@ class KomikController
         "scripts" => ["error_post_modal_komik.js"]
       ]);
 
+    }
+  }
+
+  public function delete(int $id_karya): void
+  {
+    try {
+      self::$komikService->deleteKomikByIdKarya($id_karya);
+      View::redirect("/profile/komik");
+    } catch (ValidationException $e) {
+      View::render("komik/index", [
+        "title" => "Komik Saya — Ceritawa",
+        "styles" => ["komik.css"],
+        "error_message" => $e->getMessage(),
+        "scripts" => ["error_post_modal_komik.js"]
+      ]);
     }
   }
 }

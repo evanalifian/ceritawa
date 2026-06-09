@@ -44,4 +44,22 @@ class KomikService
   public function getAllKomik(): array {
     return self::$komikRepository->getAllKomik();
   }
+
+  public function deleteKomikByIdKarya(int $id_karya): void
+  {
+    try {
+      $komik = self::$komikRepository->getKomikByIdKarya($id_karya);
+      if (!$komik) {
+        throw new ValidationException("Karya tidak ditemukan");
+      } else {
+        $file_path = __DIR__ . "/../../public/uploads/komik/" . $komik["file_name_komik"];
+        if (file_exists($file_path)) {
+          unlink($file_path);
+        }
+      }
+      self::$komikRepository->deleteKomikByIdKarya($id_karya);
+    } catch (ValidationException $e) {
+      throw new ValidationException("Gagal menurunkan karya. Silakan coba lagi.");
+    }
+  }
 }

@@ -65,7 +65,7 @@
                   Buka Dokumen <i class="bi bi-box-arrow-up-right ms-1"></i>
                 </a>
                 <button type="button" class="btn btn-outline-danger border-2 rounded-3 fw-bold py-2"
-                  onclick="confirmDeleteComic('<?= $k['id_komik'] ?>')">
+                  onclick="confirmDeleteComic(<?= $k['id_karya'] ?>)">
                   Turunkan Karya <i class="bi bi-trash3-fill ms-1"></i>
                 </button>
               </div>
