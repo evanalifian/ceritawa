@@ -62,7 +62,7 @@ class KomikController
 
       self::$karyaService->save(self::$karyaModel, "komik");
       self::$komikService->save(self::$komikModel);
-      View::redirect("/komik/upload");
+      View::redirect("/profile/komik");
     } catch (ValidationException $e) {
       View::render("komik/upload", [
         "title" => "Unggah Komik — Ceritawa",
