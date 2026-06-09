@@ -32,9 +32,7 @@
       </div>
       <div class="border-top border-light-subtle my-4"></div>
       <div class="text-center">
-        <p class="small text-muted mb-0">&copy;
-          <?php echo date("Y"); ?> Ceritawa. Desain Media Pembelajaran BI — Universitas Trunojoyo Madura.
-        </p>
+        <p class="small text-muted mb-0">&copy; <?php echo date("Y"); ?> Ceritawa.</p>
       </div>
     </div>
   </footer>

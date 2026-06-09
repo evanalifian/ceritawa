@@ -6,7 +6,58 @@
     <span class="small fw-bold tracking-wide">MODUL BELAJAR INTERAKTIF</span>
   </div>
   <h1 class="display-4 fw-black text-dark mb-2">Eksplorasi Materi</h1>
-  <p class="text-secondary font-monospace">Yuk pahami konsep, struktur, dan kaidah kebahasaan Teks Anekdot!</p>
+  <p class="text-secondary font-monospace mb-4">Yuk pahami konsep, struktur, dan kaidah kebahasaan Teks Anekdot!</p>
+
+  <div class="row g-3 text-start mt-2">
+    <div class="col-lg-5">
+      <div class="card border border-2 border-dark bg-white p-4 rounded-4 shadow-sm h-100"
+        style="box-shadow: 4px 4px 0px 0px #000000 !important;">
+        <div
+          class="d-inline-flex align-items-center gap-2 mb-2 bg-primary-subtle border border-primary border-2 px-3 py-1 rounded-3">
+          <i class="bi bi-mortarboard-fill text-primary"></i>
+          <span class="small fw-bold text-primary tracking-wide">CAPAIAN PEMBELAJARAN (CP)</span>
+        </div>
+        <p class="text-secondary lh-lg mb-0 mt-2 fw-medium">
+          Murid mampu memahami, menganalisis, dan memproduksi teks anekdot yang mengandung humor serta kritik sosial
+          dengan memperhatikan struktur, kaidah kebahasaan, dan tujuan komunikatifnya secara kreatif dan santun.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-7">
+      <div class="card border border-2 border-dark bg-white p-4 rounded-4 shadow-sm h-100"
+        style="box-shadow: 4px 4px 0px 0px #000000 !important;">
+        <div
+          class="d-inline-flex align-items-center gap-2 mb-3 bg-success-subtle border border-success border-2 px-3 py-1 rounded-3">
+          <i class="bi bi-bullseye text-success"></i>
+          <span class="small fw-bold text-success tracking-wide">TUJUAN PEMBELAJARAN (TP)</span>
+        </div>
+        <ol class="list-group list-group-numbered border-0 gap-1.5 dynamic-tp-list">
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Menjelaskan</span> pengertian, fungsi, tujuan, dan ciri-ciri teks anekdot
+            dengan tepat.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Mengidentifikasi</span> struktur teks anekdot (abstrak, orientasi, krisis,
+            reaksi, dan koda) pada teks yang dibaca secara benar.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Menganalisis</span> unsur humor, kritik sosial, dan pesan moral yang terdapat
+            dalam teks anekdot.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Membedakan</span> teks anekdot dengan teks humor berdasarkan tujuan, isi, dan
+            karakteristiknya.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Menyusun</span> kerangka teks anekdot berdasarkan tema dan kritik sosial yang
+            dipilih.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Menulis</span> teks anekdot yang sesuai dengan struktur dan kaidah kebahasaan
+            secara kreatif dan komunikatif.</li>
+          <li class="list-group-item border-0 p-0 text-secondary bg-transparent"><span
+              class="fw-medium text-dark">Menyajikan</span> atau mengunggah hasil karya teks anekdot sebagai bentuk
+            apresiasi dan refleksi pembelajaran.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main class="container my-4">
@@ -21,31 +72,31 @@
       <ul class="dropdown-menu border border-2 border-dark rounded-3 w-100 shadow p-2" role="tablist">
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold active" data-bs-toggle="tab"
             data-bs-target="#materi-pengertian" type="button" role="tab" aria-selected="true"><i
-              class="bi bi-info-circle-fill me-2 text-primary"></i> 1. Pengertian</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 1. Pengertian</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-fungsi" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-ui-checks-grid me-2 text-success"></i> 2. Fungsi Teks Anekdot</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 2. Fungsi Teks Anekdot</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-tujuan" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-bullseye me-2 text-danger"></i> 3. Tujuan</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 3. Tujuan</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-ciri" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-stars me-2 text-warning"></i> 4. Ciri-ciri Teks Anekdot</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 4. Ciri-ciri Teks Anekdot</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-unsur" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-tags-fill me-2 text-info"></i> 5. Unsur-unsur Teks Anekdot</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 5. Unsur-unsur Teks Anekdot</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-struktur" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-diagram-3-fill me-2 text-primary"></i> 6. Struktur Teks Anekdot</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 6. Struktur Teks Anekdot</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-jenis" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-collection-play-fill me-2 text-secondary"></i> 7. Jenis-jenis Teks Anekdot</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 7. Jenis-jenis Teks Anekdot</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-langkah" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-pencil-square me-2 text-warning"></i> 8. Langkah-langkah Membuat</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 8. Langkah-langkah Membuat</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-perbedaan" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-arrow-left-right me-2 text-dark"></i> 9. Anekdot vs Humor</button></li>
+              class="bi bi-book-half me-2 text-info"></i> 9. Anekdot vs Humor</button></li>
         <li><button class="dropdown-item py-2.5 rounded-2 fw-semibold" data-bs-toggle="tab"
             data-bs-target="#materi-contoh" type="button" role="tab" aria-selected="false"><i
               class="bi bi-book-half me-2 text-info"></i> 10. Contoh Teks Anekdot</button></li>
@@ -60,39 +111,39 @@
           <button
             class="nav-link active text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-pengertian" type="button" role="tab" aria-selected="true"><i
-              class="bi bi-info-circle-fill me-2 text-primary"></i> 1. Pengertian</button>
+              class="bi bi-book-half me-2 text-info"></i> 1. Pengertian</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-fungsi" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-ui-checks-grid me-2 text-success"></i> 2. Fungsi Teks Anekdot</button>
+              class="bi bi-book-half me-2 text-info"></i> 2. Fungsi Teks Anekdot</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-tujuan" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-bullseye me-2 text-danger"></i> 3. Tujuan</button>
+              class="bi bi-book-half me-2 text-info"></i> 3. Tujuan</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-ciri" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-stars me-2 text-warning"></i> 4. Ciri-ciri Teks Anekdot</button>
+              class="bi bi-book-half me-2 text-info"></i> 4. Ciri-ciri Teks Anekdot</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-unsur" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-tags-fill me-2 text-info"></i> 5. Unsur-unsur Teks</button>
+              class="bi bi-book-half me-2 text-info"></i> 5. Unsur-unsur Teks</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-struktur" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-diagram-3-fill me-2 text-primary"></i> 6. Struktur Teks Anekdot</button>
+              class="bi bi-book-half me-2 text-info"></i> 6. Struktur Teks Anekdot</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-jenis" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-collection-play-fill me-2 text-secondary"></i> 7. Jenis-jenis Teks</button>
+              class="bi bi-book-half me-2 text-info"></i> 7. Jenis-jenis Teks</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-langkah" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-pencil-square me-2 text-warning"></i> 8. Langkah-langkah</button>
+              class="bi bi-book-half me-2 text-info"></i> 8. Langkah-langkah</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-perbedaan" type="button" role="tab" aria-selected="false"><i
-              class="bi bi-arrow-left-right me-2 text-dark"></i> 9. Anekdot vs Humor</button>
+              class="bi bi-book-half me-2 text-info"></i> 9. Anekdot vs Humor</button>
           <button
             class="nav-link text-start border border-2 border-dark bg-white text-dark rounded-3 py-2.5 shadow-sm fw-bold transition-all small"
             data-bs-toggle="pill" data-bs-target="#materi-contoh" type="button" role="tab" aria-selected="false"><i
