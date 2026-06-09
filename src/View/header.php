@@ -62,7 +62,7 @@
                   </li>
   
                   <li>
-                    <a class="dropdown-item rounded-2 fw-bold mb-1 py-2 text-dark" href="/profile/komik">
+                    <a class="dropdown-item rounded-2 fw-bold mb-1 py-2 text-dark" href="/komik/upload">
                       <i class="bi bi-file-earmark-plus-fill me-2 text-warning"></i>Unggah Komik
                     </a>
                   </li>

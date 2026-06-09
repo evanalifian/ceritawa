@@ -39,6 +39,8 @@ Router::add("/account/delete", "GET", fn() => $account->delete(), [fn() => AuthM
 Router::add("/profile/teks-anekdot", "GET", fn() => $profile->anekdot(), [fn() => AuthMiddleware::isNotAuth()]);
 Router::add("/profile/komik", "GET", fn() => $komik->index(), [fn() => AuthMiddleware::isNotAuth()]);
 Router::add("/profile/komik", "POST", fn() => $komik->save(), [fn() => AuthMiddleware::isNotAuth()]);
+Router::add("/komik/upload", "GET", fn() => $komik->upload(), [fn() => AuthMiddleware::isNotAuth()]);
+Router::add("/komik/upload", "POST", fn() => $komik->uploadSave(), [fn() => AuthMiddleware::isNotAuth()]);
 Router::add("/komik/delete/(.*)", "GET", fn($id_karya) => $komik->delete($id_karya), [fn() => AuthMiddleware::isNotAuth()]);
 
 Router::add("/login", "GET", fn() => $auth->page(), [fn() => AuthMiddleware::isAuth()]);

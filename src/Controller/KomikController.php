@@ -41,6 +41,38 @@ class KomikController
     ]);
   }
 
+  public function upload(): void
+  {
+    View::render("komik/upload", [
+      "title" => "Unggah Komik — Ceritawa",
+      "styles" => ["komik.css"],
+      "scripts" => ["komik.js"],
+      "komik" => self::$komikService->getAllKomik()
+    ]);
+  }
+
+  public function uploadSave(): void
+  {
+    try {
+      self::$karyaModel->judul_karya = $_POST["judul_karya"];
+      self::$karyaModel->penulis_karya = $_POST["penulis_karya"];
+      self::$karyaModel->email_penulis_karya = $_POST["email_penulis_karya"];
+      self::$komikModel->deskripsi_komik = $_POST["deskripsi_komik"];
+      self::$komikModel->file_name_komik = $_FILES["file_komik"]["name"];
+
+      self::$karyaService->save(self::$karyaModel, "komik");
+      self::$komikService->save(self::$komikModel);
+      View::redirect("/komik/upload");
+    } catch (ValidationException $e) {
+      View::render("komik/upload", [
+        "title" => "Unggah Komik — Ceritawa",
+        "styles" => ["komik.css"],
+        "error_message" => $e->getMessage(),
+        "scripts" => ["error_post_modal_komik.js"]
+      ]);
+    }
+  }
+
   public function save(): void
   {
     try {
@@ -60,7 +92,6 @@ class KomikController
         "error_message" => $e->getMessage(),
         "scripts" => ["error_post_modal_komik.js"]
       ]);
-
     }
   }
 
