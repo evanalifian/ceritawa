@@ -2,7 +2,7 @@
   <div
     class="d-inline-flex align-items-center gap-2 mb-3 bg-white border border-dark border-2 px-3 py-1.5 rounded-3 shadow-sm"
     style="transform: rotate(-0.5deg);">
-    <i class="bi bi-brain-fill text-primary"></i>
+    <i class="bi bi-journal-text text-primary"></i>
     <span class="small fw-bold tracking-wide">ASAH KEMAMPUAN LITERASI</span>
   </div>
   <h1 class="display-4 fw-black text-dark mb-2">Quiz Teks Anekdot</h1>

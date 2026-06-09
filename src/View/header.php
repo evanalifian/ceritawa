@@ -20,14 +20,17 @@
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <i class="bi bi-grid-fill fs-3 text-dark"></i>
         </button>
-
+  
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ms-auto gap-1 fw-bold small text-uppercase tracking-wider align-items-center">
+  
             <?php foreach ($data["navbar_menu"] as $menu): ?>
-              <a class="nav-link text-<?= $menu["path"] === $_SERVER['REQUEST_URI'] ? "primary" : "muted" ?>"
-                href="<?= $menu["path"] ?>"><?= $menu["name"] ?></a>
+              <?php if ($menu["path"] !== "/latihan-menulis"): ?>
+                <a class="nav-link text-<?= $menu["path"] === $_SERVER['REQUEST_URI'] ? "primary" : "muted" ?>"
+                  href="<?= $menu["path"] ?>"><?= $menu["name"] ?></a>
+              <?php endif ?>
             <?php endforeach ?>
-
+  
             <?php if (isset($_SESSION['auth'])): ?>
               <div class="nav-item dropdown ms-lg-2 mt-2 mt-lg-0">
                 <button
@@ -36,11 +39,11 @@
                   <i class="bi bi-person-circle fs-5 text-primary"></i>
                   <span class="small text-lowercase fw-bolder">Akun saya</span>
                 </button>
-
+  
                 <ul class="dropdown-menu dropdown-menu-end border border-dark border-2 rounded-3 p-2 shadow mt-2">
                   <li>
                     <a class="dropdown-item rounded-2 fw-bold mb-1 py-2 text-dark" href="/profile">
-                      <i class="bi bi-person-bounding-box me-2 text-primary"></i>Profile Saya
+                      <i class="bi bi-person-bounding-box me-2 text-primary"></i>Profil Saya
                     </a>
                   </li>
                   <li>
@@ -49,10 +52,27 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item rounded-2 fw-bold mb-2 py-2 text-dark" href="/profile/komik">
+                    <a class="dropdown-item rounded-2 fw-bold mb-1 py-2 text-dark" href="/profile/komik">
                       <i class="bi bi-image-fill me-2 text-warning"></i>Komik Saya
                     </a>
                   </li>
+  
+                  <li>
+                    <hr class="dropdown-divider border-dark border-1 my-1">
+                  </li>
+  
+                  <li>
+                    <a class="dropdown-item rounded-2 fw-bold mb-1 py-2 text-dark" href="/profile/komik">
+                      <i class="bi bi-file-earmark-plus-fill me-2 text-warning"></i>Unggah Komik
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a class="dropdown-item rounded-2 fw-bold mb-2 py-2 text-dark" href="/latihan-menulis">
+                      <i class="bi bi-pencil-square me-2 text-primary"></i>Menulis Anekdot
+                    </a>
+                  </li>
+  
                   <li>
                     <hr class="dropdown-divider border-dark border-1 my-1">
                   </li>
