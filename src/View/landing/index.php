@@ -127,8 +127,10 @@
             “<?php echo $randomQuote; ?>”
           </h4>
           <div class="border-top border-dark opacity-25 my-2"></div>
-          <p class="text-muted small fw-bold mb-0"><i class="bi bi-arrow-clockwise"></i> Ketuk refresh untuk ganti
-            kutipan</p>
+          <button id="change_quote_btn">
+            <p class="text-muted small fw-bold mb-0"><i class="bi bi-arrow-clockwise"></i> Ketuk refresh untuk ganti
+              kutipan</p>
+          </button>
         </div>
       </div>
     </div>
