@@ -146,10 +146,7 @@
             <div
               class="d-inline-flex align-items-center justify-content-center bg-info border border-2 border-dark rounded-4 fw-bold text-dark shadow-sm position-relative overflow-hidden"
               style="width: 95px; height: 95px; transform: rotate(-2deg);">
-
-              <!-- PENGGANTIAN IKON MENJADI TAG IMG -->
               <img src="/public/profil.jpg" alt="Foto Hani Dwi Yulinda Putri" class="w-100 h-100 object-fit-cover">
-
               <div class="position-absolute top-0 start-0 translate-middle bg-danger rounded-circle"
                 style="width: 12px; height: 12px; z-index: 2;"></div>
             </div>
@@ -162,12 +159,30 @@
             <p class="text-secondary small fw-medium mb-3">
               Mahasiswa Pendidikan Bahasa dan Sastra Indonesia · Universitas Trunodjoyo Madura
             </p>
-            <div class="bg-light p-3 rounded-3 border-start border-4 border-warning">
+            <div class="bg-light p-3 rounded-3 border-start border-4 border-warning mb-3">
               <span class="d-block small text-muted fw-bold text-uppercase tracking-wider mb-1"
                 style="font-size: 0.7rem;"><i class="bi bi-chat-dots-fill me-1 text-warning"></i> Slogan
                 Pembuatan</span>
               <p class="small text-dark font-monospace mb-0 fw-semibold">"Dari Cerita Lahir Tawa, dari Tawa Lahir
                 Makna."</p>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center justify-content-sm-start gap-2 small fw-bold">
+              <a href="mailto:hani.dyp@gmail.com" class="btn btn-sm btn-outline-dark border-2 rounded-3 px-3 py-1.5">
+                <i class="bi bi-envelope-fill text-danger me-1"></i> GMAIL
+              </a>
+              <a href="https://www.instagram.com/_hanptrr/" target="_blank"
+                class="btn btn-sm btn-outline-dark border-2 rounded-3 px-3 py-1.5">
+                <i class="bi bi-instagram text-danger me-1"></i> INSTAGRAM
+              </a>
+              <a href="https://www.linkedin.com/in/hani-dyp/" target="_blank"
+                class="btn btn-sm btn-outline-dark border-2 rounded-3 px-3 py-1.5">
+                <i class="bi bi-linkedin text-primary me-1"></i> LINKEDIN
+              </a>
+              <a href="https://www.youtube.com/@hndaily" target="_blank"
+                class="btn btn-sm btn-outline-dark border-2 rounded-3 px-3 py-1.5">
+                <i class="bi bi-youtube text-danger me-1"></i> YOUTUBE
+              </a>
             </div>
           </div>
         </div>
