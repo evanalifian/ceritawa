@@ -37,7 +37,7 @@ class KomikController
       "title" => "Komik Saya — Ceritawa",
       "styles" => ["komik.css"],
       "scripts" => ["komik.js"],
-      "komik" => self::$komikService->getAllKomik()
+      "komik" => self::$komikService->getAllKomikByIdUser()
     ]);
   }
 
@@ -47,7 +47,7 @@ class KomikController
       "title" => "Unggah Komik — Ceritawa",
       "styles" => ["komik.css"],
       "scripts" => ["komik.js"],
-      "komik" => self::$komikService->getAllKomik()
+      "komik" => self::$komikService->getAllKomikByIdUser()
     ]);
   }
 

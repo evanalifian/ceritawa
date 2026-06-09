@@ -41,8 +41,8 @@ class KomikService
     }
   }
 
-  public function getAllKomik(): array {
-    return self::$komikRepository->getAllKomik();
+  public function getAllKomikByIdUser(): array {
+    return self::$komikRepository->getAllKomikByIdUser();
   }
 
   public function deleteKomikByIdKarya(int $id_karya): void

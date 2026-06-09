@@ -20,7 +20,7 @@ class KomikRepository
     return $statement;
   }
 
-  public function getAllKomik(): array {
+  public function getAllKomikByIdUser(): array {
     $statement = self::$connDB->prepare("
       SELECT
           k.id_karya,
@@ -34,8 +34,9 @@ class KomikRepository
           km.file_name_komik
       FROM karya AS k
       JOIN komik AS km ON km.id_karya = k.id_karya
+      WHERE k.id_user = ?
     ");
-    $statement->execute();
+    $statement->execute([$_SESSION['auth']['id_user']]);
     return $statement->fetchAll();
   }
 
