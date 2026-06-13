@@ -123,9 +123,10 @@
           ];
           $randomQuote = $quotes[array_rand($quotes)];
           ?>
-          <h4 class="fw-bold font-monospace lh-base px-2 mb-3">
+          <h4 id="quote-text" class="fw-bold font-monospace lh-base px-2 mb-3">
             “<?php echo $randomQuote; ?>”
           </h4>
+
           <div class="border-top border-dark opacity-25 my-2"></div>
           <button id="change_quote_btn">
             <p class="text-muted small fw-bold mb-0"><i class="bi bi-arrow-clockwise"></i> Ketuk refresh untuk ganti

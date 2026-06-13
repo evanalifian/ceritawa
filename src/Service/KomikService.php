@@ -19,10 +19,29 @@ class KomikService
   {
     self::komikValidate($model);
 
-    $file_name = $_FILES["file_komik"]["name"];
-    $file_tmp = $_FILES["file_komik"]["tmp_name"];
+    $fileName = $_FILES["file_komik"]["name"];
+    $fileTmp = $_FILES["file_komik"]["tmp_name"];
 
-    move_uploaded_file($file_tmp, __DIR__ . "/../../public/uploads/komik/" . $file_name);
+    // Ambil extension file
+    $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+
+    // Ambil nama file tanpa extension
+    $nameOnly = pathinfo($fileName, PATHINFO_FILENAME);
+
+    // Hilangkan karakter aneh dan ganti spasi menjadi _
+    $nameOnly = preg_replace('/[^A-Za-z0-9_-]/', '_', $nameOnly);
+
+    // Buat nama file unik
+    $newFileName = time() . '_' . $nameOnly . '.' . $extension;
+
+    $uploadPath = __DIR__ . "/../../public/uploads/komik/" . $newFileName;
+
+    if (!move_uploaded_file($fileTmp, $uploadPath)) {
+      throw new \Exception("Gagal mengupload file.");
+    }
+
+    $model->file_name_komik = $newFileName;
+
     self::$komikRepository->save($model);
   }
 
@@ -41,7 +60,8 @@ class KomikService
     }
   }
 
-  public function getAllKomikByIdUser(): array {
+  public function getAllKomikByIdUser(): array
+  {
     return self::$komikRepository->getAllKomikByIdUser();
   }
 
